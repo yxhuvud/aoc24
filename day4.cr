@@ -4,8 +4,8 @@ A = 'A'
 S = 'S'
 
 def mas(input, i, j, di, dj)
-  return 0 unless 0 <= i + 3 * di < input.size
-  return 0 unless 0 <= j + 3 * dj < input[1].size
+  return false unless 0 <= i + 3 * di < input.size
+  return false unless 0 <= j + 3 * dj < input[1].size
 
   {input[i + di][j + dj], input[i + 2 * di][j + 2 * dj], input[i + 3 * di][j + 3 * dj]} == {M, A, S}
 end
